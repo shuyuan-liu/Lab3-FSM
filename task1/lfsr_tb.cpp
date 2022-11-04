@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
     }
     vbdHeader("Lab 3: LFSR");
 
-    for (int cycle = 0; cycle < 200; cycle++) {
+    for (int cycle = 0; cycle < 1000; cycle++) {
         top->rst = cycle == 0;
         top->en = 1;
 
@@ -31,8 +31,8 @@ int main(int argc, char* argv[])
             logger->dump(2 * cycle + i);
         }
 
-        //vbdPlot(top->data_out, 0, 0x7F);
-        vbdBar(top->data_out);
+        vbdPlot(top->data, 0, 0xFF);
+        vbdBar(top->data);
         vbdCycle(cycle + 1);
 
         if (Verilated::gotFinish()) {
