@@ -29,14 +29,14 @@ end
 
 always_comb begin
     case (current_state)
-        S0: out = 8'b0;
-        S1: out = 8'b1;
-        S2: out = 8'b11;
-        S3: out = 8'b111;
-        S4: out = 8'b1111;
-        S5: out = 8'b11111;
-        S6: out = 8'b111111;
-        S7: out = 8'b1111111;
+        S0: out = 8'b00000000;
+        S1: out = 8'b00000001;
+        S2: out = 8'b00000011;
+        S3: out = 8'b00000111;
+        S4: out = 8'b00001111;
+        S5: out = 8'b00011111;
+        S6: out = 8'b00111111;
+        S7: out = 8'b01111111;
         S8: out = 8'b11111111;
     endcase
 end
