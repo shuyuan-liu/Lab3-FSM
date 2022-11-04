@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
             logger->dump(2 * cycle + i);
         }
 
-        vbdPlot(top->data_out, 0, 15);
+        //vbdPlot(top->data_out, 0, 0x7F);
         vbdBar(top->data_out);
         vbdCycle(cycle + 1);
 
