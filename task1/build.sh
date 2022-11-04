@@ -8,5 +8,5 @@ rm -rf obj_dir
 rm -rf *.vcd
 
 verilator --top $TOP_MODULE -Wall --cc --trace *.sv --exe *_tb.cpp
-make -C obj_dir -f V$TOP_MODULE.mk
+make -j7 -C obj_dir -f V$TOP_MODULE.mk
 ./obj_dir/V$TOP_MODULE
